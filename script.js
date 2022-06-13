@@ -11,7 +11,7 @@ fetch("https://type.fit/api/quotes")
   })
   .then(function(data) {
     console.log(data);
-    // quoteGen.innerHTML = 
+    quoteGen.innerHTML = ``;
   });
 }
 
