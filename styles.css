@@ -22,3 +22,7 @@ body{
     height: 55vh;
     font-family: 'Lato', sans-serif;
 }
+button{
+    border: none;
+    border-radius: 4px;
+}
