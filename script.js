@@ -1,20 +1,16 @@
 const createBtn = document.getElementById("create-btn");
-const quoteGen = document.getElementById("quote");
-
-let response = fetch("https://type.fit/api/quotes");
+let quoteGen = document.querySelector(".quote");
+let author = document.querySelector(".author");
 
 function findQuotes(){
-    // e.preventDefault();
-// fetch("https://type.fit/api/quotes")
-//   .then(function(response) {
-//     return response.json();
-//   })
-//   .then(function(data) {
-//     console.log(data);
-//     quoteGen.innerHTML = ``;
-//   });
+ 
+fetch('https://api.quotable.io/random')
+.then(response => response.json())
+ .then(quotes => {
+
+   quoteGen.innerHTML = quotes.content;
+  
+    author.innerHTML = quotes.author;
+ }  
+   );
 }
-
-
-//Event Listener
-createBtn.addEventListener('submit', findQuotes);
